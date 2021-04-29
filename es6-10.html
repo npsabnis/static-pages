@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UIKit page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script>
+        "use strict";
+        	const url = "/frs";
+        	const data;
+        	class Metadata{
+        		constructor(url){ 
+        			Object.freeze(this);
+        			await fetch(url).then(response => this.data = response.json());
+        		}
+        		async data(){ return await fetch(url).then(response => this.data = response.json()); }
+        	}
+        
+        	
+        	
+        	
+        	function myFun(){
+        		const meta = new Metadata().get('/frs');
+        		meta.then(console.log);
+        	}
+        </script>
+	</head>
+<body>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+<input type="range" id="a" value="50">
++<input type="number" id="b" value="25">
+=<output name="x" for="a b"></output>
+</form>  
+<button onclick="myFun()"> metadata</button>
+</body>
+</html>

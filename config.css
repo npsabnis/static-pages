@@ -1,0 +1,74 @@
+* { box-sizing: border-box;}
+
+/* full height*/
+html, body {height: 98%; }
+.sidenav,.content, .row {height: 94%;}
+.content{margin-right: 10px;}
+
+.header,.footer{color: white; text-align: center; padding:3px}
+
+/* Theme colors background font size*/
+html, body{background-color: blue; font-size: small;}
+::-webkit-scrollbar {width: 8px;height:8px;}
+::-webkit-scrollbar-track {background: #ddd; }
+::-webkit-scrollbar-thumb {background: #a0a0d4;   border-radius:250px;}
+::-webkit-scrollbar-thumb:hover {background: blue; border-radius:250px;}
+
+
+
+/* Style the side navigation */
+.sidenav 	{width: 20%; max-width:150px; float:left;}
+.sidenav a 	{	color: white; padding: 10px; display: block;}
+.sidenav a:hover { background-color: #ddd; color: #4732f3;}
+
+/* Container for flexboxes */
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+.row { display: flex; }
+
+@media (max-width: 600px) {
+ .row {  flex-direction: column; }
+}
+
+.column{overflow:auto;background-color:#ddd;}
+
+.collections{min-width: 10%;}
+.documents{min-width: 60%;}
+.values{ min-width: 30%;}
+
+.column > div{
+  max-width:fit-content;
+  overflow-wrap:anywhere;
+  background-color:white;
+  border: 1px solid blue;
+  border-width:0 0 2px 0px;
+  border-radius:5px;
+  margin:5px;
+  padding:3px;
+  }
+.column > div.selected { background-color:#cdcdd2;}
+
+.actionIcon{ float :right; margin:5px}
+
+.editForm input[name = "id"], .editForm input[name = "new_id"] {display:none;}
+.editForm .key{width:25%;}
+.editForm .value{width:75%;}
+
+.editForm .key, .editForm .value{
+  background-color:white;
+  border-bottom: 1px solid blue;
+  border-width:0 0 2px 0px;    
+  border-radius:5px;
+  padding:5px;
+  margin-left:10px;
+}
+
+.editForm .key:focus, .editForm .value:focus{outline: blue 1px;}
+
+.editForm .addBtn, .editForm .saveBtn{ padding:5px; margin: 10px; border-radius:5px;}
+
+.editForm .saveBtn{ background-color:blue; color:white; float: right; }
+.editForm .addBtn{ background-color:blue; color:white; float: left;}
+
+
+
+

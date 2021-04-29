@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>NoSQL Config</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-signin-client_id" content="875894126744-3qhkss2gvupb0mi1o3a26mgfoo24fage.apps.googleusercontent.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="config.css">
+
+<!-- required for each time auth -->
+<!-- <script src="https://apis.google.com/js/platform.js?onload=gapi_init"></script> -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<!-- required for One time auth -->
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
+<!-- <script src="https://apis.google.com/js/client:platform.js?onload=gapi_init" async defer></script> -->
+
+<script src="header.js"></script>
+<script src="config.js"></script>
+</head>
+<body>
+<div class="header">Header</div>
+	<div class="sidenav">
+<!-- 	  <div class="g-signin2"  onclick="onSignInClick"></div> -->
+	  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+	  <!-- 	 data-onsuccess="onSignIn"-->
+	  <a href="#" onclick="signOut();">Sign out</a>
+	  <br><br>	
+	  <a id="newDocumentLink" > <i class="far fa-edit editIcon" title="edit"></i> New Document </a>
+	  <a href="#">Link</a>
+	  <a href="#">Link</a>
+
+	</div>
+	<div class="content">
+		<div class="row">		
+			<div class="column collections"></div> 
+			<div class="column documents"></div> 
+			<div class="column values"></div>
+		</div>
+	</div>
+<div class="footer">Footer</div> 
+
+</body>
+</html>
