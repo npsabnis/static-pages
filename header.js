@@ -22,12 +22,11 @@ function onSignIn(googleUser) {
     });
   }
 
-
-
  let fetchCall = function(url, method, jsonData){
 	if(!url) return;
+	let serviceUrl = "https://single-sign-in-1588593684066.appspot.com";
 	if(!method) method = "GET";
-    return fetch(url,{
+    return fetch( serviceUrl + url,{
 			method:method,
 			headers: {'Content-Type': 'application/json;charset=utf-8'},
 			body:JSON.stringify(jsonData)
