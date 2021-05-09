@@ -24,7 +24,7 @@ function onSignIn(googleUser) {
 
  let fetchCall = function(url, method, jsonData){
 	if(!url) return;
-	let serviceUrl = "https://cloudtasksystem.el.r.appspot.com/";
+	let serviceUrl = "https://cloudtasksystem.el.r.appspot.com";
 	if(!method) method = "GET";
     return fetch( serviceUrl + url,{
 			method:method,
