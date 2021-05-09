@@ -24,16 +24,17 @@ function onSignIn(googleUser) {
 
  let fetchCall = function(url, method, jsonData){
 	if(!url) return;
-	let serviceUrl = "https://single-sign-in-1588593684066.appspot.com";
+//	let serviceUrl = "http://localhost:8081";
+	let serviceUrl = "https://cloudtasksystem.el.r.appspot.com/";
 	if(!method) method = "GET";
-    return fetch( serviceUrl + url,{
-			method:method,
-			headers: {'Content-Type': 'application/json;charset=utf-8'},
-			body:JSON.stringify(jsonData)
-			}).then(async function(response){
-					  if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-					  return await response.json();
-					});
+    const response = await fetch(serviceUrl + url, {
+         method: method,
+         headers: { 'Content-Type': 'application/json;charset=utf-8' },
+         body: JSON.stringify(jsonData)
+     });
+     if (!response.ok)
+         throw new Error(`HTTP error! status: ${response.status}`);
+     return await await response.json();
 	}//fetchCall
 
  
